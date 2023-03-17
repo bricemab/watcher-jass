@@ -1,9 +1,9 @@
-import fs from "fs";
-import moment from "moment/moment";
-import Utils from "./Utils";
-import GlobalStorage from "./GlobalStorage";
+const fs = require("fs");
+const moment = require("moment/moment");
+const Utils = require("./Utils");
+const GlobalStorage = require("./GlobalStorage");
 
-export default class ContactMails {
+class ContactMails {
   static async onNewContactMail(path, treatedDirectory) {
     const promisePool = GlobalStorage.getItem('dbConnection')
     let pathSplit = path.split("\\");
@@ -38,3 +38,5 @@ export default class ContactMails {
     })
   }
 }
+
+module.exports = ContactMails;

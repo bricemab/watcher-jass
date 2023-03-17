@@ -1,7 +1,7 @@
-import emlFormat from "eml-format";
-import fs from "fs";
+const emlFormat = require("eml-format");
+const fs = require("fs");
 
-export default class Utils {
+class Utils {
   static async executeSql(promisePool, sql, params) {
     try {
       await promisePool.execute(sql, params)
@@ -70,3 +70,5 @@ export default class Utils {
   }
 
 }
+
+module.exports = Utils;

@@ -1,7 +1,7 @@
-import config from "./config";
-import path from "path";
+const config = require("./config");
+const path = require("path");
 
-export default class ProfilePictures {
+class ProfilePictures {
   static async onNewProfilePicture(p) {
     const destinationPath =path.join(
       config.livePath,
@@ -10,3 +10,5 @@ export default class ProfilePictures {
     console.log(p+ " move to " + destinationPath)
   }
 }
+
+module.exports = ProfilePictures;

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   isDev: true,
   frontendPath: "/srv/www/frontend-jass/",
   backendPath: "/srv/www/rest-jass/",

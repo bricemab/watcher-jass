@@ -15,4 +15,4 @@ class GlobalStore {
 }
 
 const store = new GlobalStore();
-export default store;
+module.exports = store;
