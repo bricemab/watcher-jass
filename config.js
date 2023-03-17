@@ -10,7 +10,7 @@ const config = {
     logErr: "",
   },
 }
-config.contactMail.logErr = config.contactMail.path+"logs/log-err.txt"
-config.contactMail.logOut = config.contactMail.path+"logs/log-out.txt"
+config.contactMail.logErr = config.watcherPath.path+"logs/log-err.txt"
+config.contactMail.logOut = config.watcherPath.path+"logs/log-out.txt"
 
 module.exports = config;
