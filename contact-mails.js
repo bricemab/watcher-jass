@@ -32,7 +32,7 @@ class ContactMails {
       await Utils.writeErrLog("Error on saving data: " + response.error.toString())
     }
     console.log(config.contactMail.path+"treated/"+filename);
-    fs.rename(path, config.contactMail.path+"treated/"+filename+"/"+filename, async (err) => {
+    fs.rename(path, config.contactMail.path+"treated/"+filename, async (err) => {
       if (err) {
         await Utils.writeErrLog("Error on moving the file: " + filename);
       }
