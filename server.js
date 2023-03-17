@@ -12,7 +12,7 @@ const outLogPath = path.join(config.watcherPath, "logs/log-out.txt");
 const errLogPath = path.join(config.watcherPath, "logs/log-err.txt");
 const watcherContactMailDirectory = path.join(
   config.contactMailPath,
-  "mails/new"
+  "new"
 )
 const treatedDirectory = path.join(
   config.watcherPath,
