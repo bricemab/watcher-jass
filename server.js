@@ -28,11 +28,11 @@ const liveProfilePicture = path.join(
 const setup = async () => {
   const pool = createPool({
     host: "localhost",
-    // user: "jass-prod",
-    user: "root",
+    user: "jass-prod",
+    // user: "root",
     database: "jass-game",
-    // password: "N9Z1KzqLFudjmnYKi5TiEJ",
-    password: "SQLadmin",
+    password: "N9Z1KzqLFudjmnYKi5TiEJ",
+    // password: "SQLadmin",
     waitForConnections: true,
     namedPlaceholders: true,
     connectionLimit: 20,

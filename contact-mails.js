@@ -1,6 +1,7 @@
 const fs = require("fs");
 const moment = require("moment/moment");
 const Utils = require("./Utils");
+const config = require("./config");
 const GlobalStorage = require("./GlobalStorage");
 
 class ContactMails {
@@ -30,8 +31,8 @@ class ContactMails {
     if (!response.success) {
       await Utils.writeErrLog("Error on saving data: " + response.error.toString())
     }
-    console.log(treatedDirectory+"/"+filename);
-    fs.rename(path, treatedDirectory+"/"+filename, async (err) => {
+    console.log(config.contactMail.path+"treated/"+filename);
+    fs.rename(path, config.contactMail.path+"treated/"+filename+"/"+filename, async (err) => {
       if (err) {
         await Utils.writeErrLog("Error on moving the file: " + filename);
       }
