@@ -11,7 +11,7 @@ const ProfilePictures = require("./profile-pictures");
 const outLogPath = path.join(config.watcherPath, "logs/log-out.txt");
 const errLogPath = path.join(config.watcherPath, "logs/log-err.txt");
 const watcherContactMailDirectory = path.join(
-  config.watcherPath,
+  config.contactMailPath,
   "mails/new"
 )
 const treatedDirectory = path.join(
@@ -52,9 +52,7 @@ const setup = async () => {
       await ContactMails.onNewContactMail(p, treatedDirectory);
     }
   )
-
   console.log('New watcher on '+watcherContactMailDirectory)
-  console.log('New watcher on '+watcherProfilePictureDirectory)
 
   const watcherProfilePicture = chokidar.watch(watcherProfilePictureDirectory, {ignored: /^\./, persistent: true});
   watcherProfilePicture.on(
@@ -64,6 +62,7 @@ const setup = async () => {
       await ProfilePictures.onNewProfilePicture(p);
     }
   )
+  console.log('New watcher on '+watcherProfilePictureDirectory)
 }
 
 setup().then(() => {
