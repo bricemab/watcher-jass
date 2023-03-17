@@ -8,10 +8,8 @@ const GlobalStorage = require("./GlobalStorage");
 const { createPool } = require("mysql2");
 const ContactMails = require("./contact-mails");
 const ProfilePictures = require("./profile-pictures");
-const outLogPath = path.join(config.watcherPath, "logs/log-out.txt");
-const errLogPath = path.join(config.watcherPath, "logs/log-err.txt");
 const watcherContactMailDirectory = path.join(
-  config.contactMailPath,
+  config.contactMail.path,
   "new"
 )
 const treatedDirectory = path.join(

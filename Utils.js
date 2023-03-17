@@ -1,5 +1,6 @@
 const emlFormat = require("eml-format");
 const fs = require("fs");
+const config = require("./config");
 
 class Utils {
   static async executeSql(promisePool, sql, params) {
@@ -38,7 +39,7 @@ class Utils {
   static async writeErrLog(txt) {
     txt += "\r\n";
     return new Promise(resolve => {
-      fs.appendFile(errLogPath, txt, function (err) {
+      fs.appendFile(config.contactMail.logErr, txt, function (err) {
         if (err) throw err;
         resolve({})
       });
@@ -48,7 +49,7 @@ class Utils {
   static async writeOutLog(txt) {
     txt += "\r\n";
     return new Promise(resolve => {
-      fs.appendFile(outLogPath, txt, function (err) {
+      fs.appendFile(config.contactMail.logOut, txt, function (err) {
         if (err) throw err;
         resolve({})
       });
