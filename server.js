@@ -30,7 +30,7 @@ const setup = async () => {
     host: "localhost",
     user: "jass-prod",
     // user: "root",
-    database: "jass-game",
+    database: "jass-prod",
     password: "N9Z1KzqLFudjmnYKi5TiEJ",
     // password: "SQLadmin",
     waitForConnections: true,
