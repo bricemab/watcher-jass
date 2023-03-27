@@ -5,7 +5,7 @@ const config = require("./config");
 const GlobalStorage = require("./GlobalStorage");
 
 class ContactMails {
-  static async onNewContactMail(path, treatedDirectory) {
+  static async onNewContactMail(path) {
     const promisePool = GlobalStorage.getItem('dbConnection')
     let pathSplit = path.split("\\");
     if (pathSplit.length === 1) {
