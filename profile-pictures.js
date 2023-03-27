@@ -8,7 +8,7 @@ class ProfilePictures {
       config.livePath,
       "profile-pictures/"
     )
-    let pathSplit = path.split("\\");
+    let pathSplit = destinationPath.split("\\");
     if (pathSplit.length === 1) {
       pathSplit = pathSplit[0].split('/');
     }
