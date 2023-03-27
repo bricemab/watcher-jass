@@ -14,6 +14,7 @@ class ProfilePictures {
     }
     const filename = pathSplit[pathSplit.length-1]
     console.log(p+ " move to " + destinationPath);
+    console.log(filename);
     await fs.renameSync(p, destinationPath+filename);
   }
 }
