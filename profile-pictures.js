@@ -13,7 +13,7 @@ class ProfilePictures {
       pathSplit = pathSplit[0].split('/');
     }
     const filename = pathSplit[pathSplit.length-1];
-    const destinationFile = destinationFile+filename
+    const destinationFile = destinationPath+filename
     console.log(p+ " move to " + destinationFile);
     await fs.renameSync(p, destinationFile);
   }
