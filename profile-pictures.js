@@ -12,10 +12,10 @@ class ProfilePictures {
     if (pathSplit.length === 1) {
       pathSplit = pathSplit[0].split('/');
     }
-    const filename = pathSplit[pathSplit.length-1]
-    console.log(p+ " move to " + destinationPath);
-    console.log(filename);
-    await fs.renameSync(p, destinationPath+filename);
+    const filename = pathSplit[pathSplit.length-1];
+    const destinationFile = destinationFile+filename
+    console.log(p+ " move to " + destinationFile);
+    await fs.renameSync(p, destinationFile);
   }
 }
 
